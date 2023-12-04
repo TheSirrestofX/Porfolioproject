@@ -1,122 +1,155 @@
 body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .header {
-    background-color: #24292e;
-    color: #fff;
-    padding: 20px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .header h1 {
-    font-size: 24px;
-    margin: 0;
-  }
-  
-  .header img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
-  
-  .main {
-    padding: 20px;
-    background-color: #f2f2f2;
-  }
-  
-  .about {
-    margin-bottom: 20px;
-  }
-  
-  .about h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-  
-  .about p {
-    line-height: 1.5;
-  }
-  
-  .hobbies,
-  .dislikes {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .hobbies li,
-  .dislikes li {
-    margin: 5px;
-    padding: 5px 10px;
-    border-radius: 5px;
-    background-color: #ddd;
-  }
-  
-  .motto {
-    font-style: italic;
-    margin: 20px 0;
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-    padding: 10px;
-  }
-  
-  .portfolio {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 20px;
-  }
-  
-  .portfolio-card {
-    margin: 10px;
-    padding: 20px;
-    border-radius: 5px;
-    background-color: #fff;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  }
-  
-  .portfolio-card h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  .portfolio-card p {
-    line-height: 1.5;
-  }
-  
-  .portfolio-card ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-  
-  .portfolio-card a {
-    display: inline-block;
-    padding: 5px 10px;
-    border-radius: 5px;
-    background-color: #24292e;
-    color: #fff;
-    text-decoration: none;
-    margin-top: 10px;
-  }
-  
-  .footer {
-    background-color: #24292e;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .footer a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 5px;
-  }
-  
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Hide horizontal scrollbar for full-width sections */
+}
+
+/* Black bars */
+
+header::before,
+footer::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #24292e;
+}
+
+footer::after {
+  bottom: 0;
+  top: auto;
+}
+
+/* Header */
+
+.header {
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header h1 {
+  font-size: 24px;
+  margin: 0;
+  color: #fff;
+}
+
+.header img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* Main Content */
+
+.main {
+  padding: 20px;
+  background-color: #f2f2f2;
+  position: relative; /* Needed for positioning sidebars */
+}
+
+/* Sidebars */
+
+.sidebar {
+  position: absolute;
+  top: 50px;
+  bottom: 0;
+  padding: 20px;
+  width: 200px;
+  background-color: #ddd;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.left-sidebar {
+  left: 0;
+}
+
+.right-sidebar {
+  right: 0;
+}
+
+/* Content Sections */
+
+.content-section {
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.content-section h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.content-section p {
+  line-height: 1.5;
+}
+
+/* About Me */
+
+.about .content-section {
+  margin-top: 50px; /* Space above due to black bar */
+}
+
+.about p {
+  line-height: 1.6;
+}
+
+.about .button {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #24292e;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* Other sections */
+
+.hobbies,
+.dislikes,
+.portfolio {
+  @extend .content-section; /* Inherit styles from content-section class */
+}
+
+.hobbies li,
+.dislikes li {
+  margin: 5px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #ddd;
+}
+
+.portfolio-card {
+  margin: 10px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.portfolio-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.portfolio-card a {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #24292e;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 10px
