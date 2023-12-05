@@ -2,7 +2,7 @@ body {
   font-family: sans-serif;
   margin: 0;
   padding: 0;
-  overflow-x: hidden; 
+  overflow-x: hidden;
 }
 
 header::before,
@@ -42,10 +42,15 @@ footer::after {
   margin-right: 10px;
 }
 
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
 .main {
   padding: 20px;
   background-color: #f2f2f2;
-  position: relative; 
+  position: relative;
 }
 
 .sidebar {
@@ -66,12 +71,16 @@ footer::after {
   right: 0;
 }
 
-
 .content-section {
   padding: 20px;
   margin-bottom: 20px;
   background-color: #fff;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.about .content-section {
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
 }
 
 .content-section h2 {
@@ -83,31 +92,10 @@ footer::after {
   line-height: 1.5;
 }
 
-
-.about .content-section {
-  margin-top: 50px; 
-}
-
-.about p {
-  line-height: 1.6;
-}
-
-.about .button {
-  display: inline-block;
-  padding: 5px 10px;
-  border-radius: 5px;
-  background-color: #24292e;
-  color: #fff;
-  text-decoration: none;
-  margin-top: 10px;
-  cursor: pointer;
-}
-
-
 .hobbies,
 .dislikes,
 .portfolio {
-  @extend .content-section; 
+  @extend .content-section;
 }
 
 .hobbies li,
@@ -121,12 +109,10 @@ footer::after {
 .portfolio-card {
   margin: 10px;
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: #fff;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .portfolio-card h3 {
@@ -135,10 +121,3 @@ footer::after {
 }
 
 .portfolio-card a {
-  display: inline-block;
-  padding: 5px 10px;
-  border-radius: 5px;
-  background-color: #24292e;
-  color: #fff;
-  text-decoration: none;
-  margin-top: 10px
