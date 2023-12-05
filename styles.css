@@ -2,10 +2,8 @@ body {
   font-family: sans-serif;
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Hide horizontal scrollbar for full-width sections */
+  overflow-x: hidden; 
 }
-
-/* Black bars */
 
 header::before,
 footer::after {
@@ -22,8 +20,6 @@ footer::after {
   bottom: 0;
   top: auto;
 }
-
-/* Header */
 
 .header {
   color: #fff;
@@ -46,15 +42,11 @@ footer::after {
   margin-right: 10px;
 }
 
-/* Main Content */
-
 .main {
   padding: 20px;
   background-color: #f2f2f2;
-  position: relative; /* Needed for positioning sidebars */
+  position: relative; 
 }
-
-/* Sidebars */
 
 .sidebar {
   position: absolute;
@@ -74,7 +66,6 @@ footer::after {
   right: 0;
 }
 
-/* Content Sections */
 
 .content-section {
   padding: 20px;
@@ -92,10 +83,9 @@ footer::after {
   line-height: 1.5;
 }
 
-/* About Me */
 
 .about .content-section {
-  margin-top: 50px; /* Space above due to black bar */
+  margin-top: 50px; 
 }
 
 .about p {
@@ -113,12 +103,11 @@ footer::after {
   cursor: pointer;
 }
 
-/* Other sections */
 
 .hobbies,
 .dislikes,
 .portfolio {
-  @extend .content-section; /* Inherit styles from content-section class */
+  @extend .content-section; 
 }
 
 .hobbies li,
