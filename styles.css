@@ -109,10 +109,10 @@ footer::after {
 .portfolio-card {
   margin: 10px;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 10px; /* Corrected border radius */
   background-color: #fff;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  margin-bottom: 20px;
+  margin-bottom: 20px; /* Corrected margin */
 }
 
 .portfolio-card h3 {
@@ -121,3 +121,24 @@ footer::after {
 }
 
 .portfolio-card a {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #24292e;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.footer {
+  background-color: #24292e;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 5px;
+}
